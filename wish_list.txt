@@ -1,4 +1,5 @@
 1. Fully highlight ing(?) 
-2. take input from file
+2. take input from file (ignore new lines)
 3. take target words from file
 4. GUI
+	- stats

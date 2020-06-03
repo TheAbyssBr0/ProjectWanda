@@ -52,6 +52,7 @@ for i in normalised_targets:
 list_of_nums = make_highlightable_list(list_of_tuples)
 list_of_nums.sort()
 
+print("\n" * 5)
 
 for i in range(len(input_string) - 2):
 	if i in list_of_nums:
