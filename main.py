@@ -1,12 +1,28 @@
 import string
+import os
 
-target_list = ["fish", "some", "idk", "find", "not in target", "in this", "*ing"]
+__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
-in_raw = input("> ")
+target_file = open(os.path.join(__location__, "targets.txt"), 'r')
+target_file_text = ""
+
+for i in target_file:
+	target_file_text += i
+
+target_list = target_file_text.split(",")
+
+in_raw_file = open(os.path.join(__location__, "input.txt"), 'r')
+in_raw = ""
+
+for i in in_raw_file:
+	in_raw += i
+
 input_string = " " + in_raw.lower() + " "
 
 for c in string.punctuation:
 	input_string = input_string.replace(c, " ")
+
+input_string.replace("\n", " ")
 
 def normalise_targets(some_list):
 	for word_num in range(len(some_list)):
@@ -52,7 +68,6 @@ for i in normalised_targets:
 list_of_nums = make_highlightable_list(list_of_tuples)
 list_of_nums.sort()
 
-print("\n" * 5)
 
 for i in range(len(input_string) - 2):
 	if i in list_of_nums:

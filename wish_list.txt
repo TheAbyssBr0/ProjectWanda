@@ -3,3 +3,8 @@
 3. take target words from file
 4. GUI
 	- stats
+
+optimizations
+1. Print optimizations
+2. bitmap
+3. single words hash map (forrest kind)
