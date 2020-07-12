@@ -51,7 +51,7 @@ sw_targets, mw_targets = get_targets(targets_string)
 catch_continuous = True                                # this is for catching continuous terms
 
 # read the input file
-in_raw_file = open(os.path.join(__location__, "bee-movie-script.txt"), 'r')
+in_raw_file = open(os.path.join(__location__, "input.txt"), 'r')
 in_file_string = in_raw_file.read()
 in_raw_file.close()
 
